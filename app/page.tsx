@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+
 const SUBMISSION_FLASH_COOKIE = "cap-submit-status";
 
 export default async function Home() {
@@ -107,9 +108,14 @@ export default async function Home() {
         ) : null}
 
         {/* Profile Image placeholder */}
-        <div className="w-24 h-24 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center font-bold text-2xl">
-          WA
-        </div>
+        <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-gray-300 flex items-center justify-center">
+  {/* eslint-disable-next-line @next/next/no-img-element */}
+  <img 
+    src="/profile.jpg" 
+    alt="Waseem Akram" 
+    className="w-full h-full object-cover object-top scale-100"
+  />
+</div>
         
         <h1 className="text-2xl font-bold">Waseem Akram</h1>
         <p className="text-slate-400 mb-6">SAP BTP & CAP Developer</p>
